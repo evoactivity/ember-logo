@@ -5,10 +5,266 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ember Logo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Mulish", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      max-width: 980px;
+      padding: 94px 40px
+    }
+
+    h1,
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 300;
+      margin: 0 0 2.5rem 0;
+    }
+
+    .two-sides {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 5rem 0;
+      gap: 4rem;
+
+      & img {
+        max-width: 600px;
+      }
+
+      & div:first-of-type {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+
+        & p {
+          font-style: italic;
+          font-weight: 600;
+          margin: 0.5rem 0 0 0;
+        }
+      }
+
+      & p:last-child {
+        margin: 0;
+      }
+    }
+
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      & li {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+        margin: 0 0 0.5rem;
+
+        & strong {
+          display: inline-block;
+          min-width: 40px;
+          flex: 0;
+          text-align: right;
+        }
+      }
+    }
+
+    p {
+      margin: 0 0 1.5rem 0;
+    }
+
+    @media screen and (min-width: 980px) {
+      body {
+        padding: 94px 120px
+      }
+
+      .two-sides {
+        flex-direction: row;
+
+        & img {
+          min-width: 400px;
+        }
+
+        & div:first-of-type {
+          text-align: left;
+        }
+      }
+
+      .two-sides.larger {
+        & img {
+          min-width: 600px;
+        }
+      }
+    }
+
+    .two-sides.equal {
+      & div {
+        width: 100%;
+        flex: 1;
+        text-align: center;
+      }
+
+      & img {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 980px) {
+      .two-sides.equal {
+        & div {
+          width: 50%;
+          flex: 1;
+        }
+
+        & img {
+          width: 100%;
+          min-width: 0;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .compare img {
+      background: #fff;
+    }
+
+    img-comparison-slider {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-  <img src="study.png" width="100%" alt="" style="min-width: 1600px">
+  <!-- <img src="study.png" width="100%" alt="" style="min-width: 1600px"> -->
+
+  <h1>A study on Ember’s logomark.</h1>
+
+  <p>As well as being my favourite frontend framework, I feel Ember’s branding is one of the strongest compared to it’s
+    peers, but that doesn’t mean it can’t be improved upon.</p>
+  <p>In the spirit of open source I present my study of the Ember logo and my suggestions for improvements.</p>
+  <p>My background is in design, and I may have spent part of my youth writing letters on walls, so I feel I have the
+    experience necessary to breakdown the current logo and find improvements in the letterforms and how they flow and
+    fit together.</p>
+  <p>So, to begin, lets analyse the current logo.</p>
+
+  <div class="two-sides">
+    <div>
+      <img src="images/original-outline.svg" alt="" width="100%">
+      <p>Original iCiel Pacifico typeface</p>
+    </div>
+    <div>
+      <p>The logo is based on the iCiel Pacifico typeface. The typeface emulates handwriting, but one of the drawbacks
+        of handwriting based fonts is, without adding a large amount of ligatures, the connections between letters can
+        only ever be approximate. Most of the time this works out, but as I will go on to show, this causes flow
+        problems, especially around the <strong>be</strong> in em<strong>be</strong>r.</p>
+    </div>
+  </div>
+
+  <div class="two-sides">
+    <div>
+      <img src="images/original-logo.svg" alt="" width="100%">
+      <p>Original Ember logo</p>
+    </div>
+    <div>
+      <p>This didn’t go unnoticed by the designer of the current logo, they did a stellar job crafting a bespoke logo
+        for the project, many modifications were made on top of the typeface.</p>
+    </div>
+  </div>
+
+  <div class="two-sides">
+    <div>
+      <img src="images/original-logo-outline.svg" alt="" width="100%">
+      <p>Typeface overlaid on logo to highlight differences.</p>
+    </div>
+    <div>
+      <p>When we overlay the typeface on the logo we can see these modifications.</p>
+
+      <p>Broadly speaking these modifications are</p>
+
+      <ul class="list">
+        <li><strong>e</strong>
+          <p>has a tail added to balance out the tail on the r</p>
+        </li>
+        <li><strong>m</strong>
+          <p>has had it’s form tweaked, the first stem has been put on a diet to match the general weight of the stroke
+          </p>
+        </li>
+        <li><strong>b</strong>
+          <p>has the most tweaks, the cut out was removed, the ascender was tightened up and the connector redrawn</p>
+        </li>
+        <li><strong>e</strong>
+          <p>some tightening up of the form</p>
+        </li>
+        <li><strong>r</strong>
+          <p>redraw the tail to round it off and tighten it up</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>The flow problem.</h2>
+
+  <p>If you were to imagine the way your hand would write out the cursive here, we run into problems around the
+    lowercase B character joining the lowercase E. Whilst the tweaks above made improvements on the original
+    letterforms, it is actually impossible to write out with simple, uninterrupted line work, as highlighted below.</p>
+
+  <div class="two-sides larger">
+    <div>
+      <img src="images/original-logo-flow.svg" alt="" width="100%">
+    </div>
+    <div>
+      <p>The connector from the <strong>m</strong> does not flow into the ascender of the <strong>b</strong>.</p>
+
+      <p>The connector from the <strong>b</strong> does not flow into the crossbar of the <strong>e</strong>.</p>
+    </div>
+  </div>
+
+  <h2>More tweaks!</h2>
+
+  <p>As I feel the branding is already strong, we only need to make small tweaks to the logo to improve the flow of the
+    letterforms.</p>
+  <p>I have redrawn the b from scratch to better fit the logo, match the angle of the other letters, and to flow
+    correctly, as it would do if writing by hand.</p>
+
+  <div class="two-sides equal">
+    <div>
+      <img src="images/new-logo.svg" alt="" width="100%">
+      <p>Redrawn logo</p>
+    </div>
+
+    <div>
+      <img src="images/new-logo-flow.svg" alt="" width="100%">
+      <p>Highlighting the flow</p>
+    </div>
+  </div>
+
+  <h2>Compare old with new.</h2>
+
+  <div class="compare">
+    <img-comparison-slider>
+      <img slot="first" src="images/original-logo.svg" width="100%" />
+      <img slot="second" src="images/new-logo.svg" width="100%" />
+    </img-comparison-slider>
+  </div>
+
 </body>
 
 </html>
