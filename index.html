@@ -147,9 +147,22 @@
     }
 
     img-comparison-slider {
+      margin: 0 0 5rem 0;
       width: 100%;
       --divider-color: rgba(0, 0, 0, 0.5);
       --default-handle-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .assets {
+      & img {
+        width: 552px;
+        max-width: 100%;
+        margin: 0 0 3rem 0;
+
+        &:last-child {
+          margin: 4rem 0 0 0;
+        }
+      }
     }
   </style>
 </head>
@@ -268,6 +281,18 @@
     </img-comparison-slider>
   </div>
 
+  <h2>As part of existing assets.</h2>
+
+  <p>As part of the existing assets, the logo is used in a few different ways, I have mocked up how the new logo would
+    look in these situations.</p>
+
+  <div class="assets">
+    <img src="images/ember-forum.png" alt="Ember Forum">
+    <img src="images/ember-times.png" alt="Ember Times">
+    <img src="images/typed-ember.png" alt="Typed Ember">
+    <img src="images/ember-cli.svg" alt="Ember CLI">
+    <img src="images/ember-data.svg" alt="Ember Data">
+  </div>
 </body>
 
 </html>
